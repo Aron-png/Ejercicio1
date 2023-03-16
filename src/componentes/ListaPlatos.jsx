@@ -5,7 +5,7 @@ function ListaPlatos(props){
     let listaCols = []//Lista de columnas
     //la funcion map ejecuta la funcion en cada elemento de la lista de manera PARALELA
     //En for seria secuencial. PERO el forEach() funciona de manera a map pero se ejecuta de forma //
-    //SECUENCIAL
+    //SECUENCIAL, python manage.py startapp ejercicio1
     props.platos.forEach(function(plato, index) {
         if (index % 2 === 0) {//indices pares, para que cada que 2 "col" se cree un "row" 
             //lo que te permite el ` es convertirle en un String. AltGr y teclado al costado de enter

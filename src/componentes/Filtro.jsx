@@ -2,7 +2,12 @@ function Filtro(props) {
     //Me devuelve un combito, un selector donde permite elegir una categoria
     //Para que nadie se pegue en top ni en bot por 4 unidades.
     return <div className="mt-4 mb-4">
-        <label className="form-label">Categoría</label>
+        
+        <figure class="text-center">
+            <blockquote class="blockquote">
+             <p>Categoría</p>
+            </blockquote>
+        </figure>
         <select className="form-select"
         //Recordemos que el onChange te recoge el id de la categoría seleccionada por el selector.
         //Aquel id = evt.target.value

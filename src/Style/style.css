@@ -1,0 +1,30 @@
+  .ITEMcarrouselE {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .ITEMcarrouselE::-webkit-scrollbar {
+    display: none;
+    
+  }
+  .ITEMcard {
+    scroll-snap-align: start;
+    border-radius: 20px;
+    height: 100%;
+    width: 1300px;
+    
+    margin: 0.5%;
+    padding: 0.5%;
+  
+  }
+  .mydiv { filter: grayscale(100%) blur(3px);}
+
+/* funcion del blanco y negro "grayscale" al 50% y un desenfoque "blur" de 10px */
+  img {
+    filter:  saturate(70%);
+  }
