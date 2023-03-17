@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-function InfoPlato(props) {
+function InfoPlato() {
     const location = useLocation()
     const [listaIngredientes, setlistaIngredientes] = useState([])
     const [listaPasos, setListaPasos] = useState([])
@@ -70,23 +70,16 @@ function InfoPlato(props) {
 
     for(let i = 0; i < ingredientes.length; i++){
         listacol.push(
-            /*
-            <div>
-            <br></br>
-            <ul class="list-group">
-            <li class="list-group-item">
-               <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-               <p className="fw-light">{ingredientes[i].nombre}</p>
-                </input>
-            </li>
-            </ul>
-            </div>*/
-            <div class="list-group">
+            
+            
+              <div class="list-group">
                 <label class="list-group-item">
                   <input class="form-check-input me-1" type="checkbox" value=""/>
                   {ingredientes[i].nombre}
                 </label>
-            </div>
+              </div>
+            
+                       
         )
     }
 
@@ -108,7 +101,16 @@ function InfoPlato(props) {
             <article className='ITEMcard'>
             <h3><p class="text-start">Ingredientes</p></h3>
             <br></br>
-            {listacol}
+            <div className="row">
+            <div className="col-md-6">
+               {listacol}
+            </div>
+            <div className="col-md-6">
+                 <img src={location.state.link}
+            className="ccard-img-top img-fluid" 
+            alt="..." />
+            </div>
+            </div>
             </article>
     )
     listarow.push(

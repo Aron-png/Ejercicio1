@@ -11,7 +11,8 @@ function ValorPlato(props) {
             //siguiennte pagina (InfoPlato), se busca como "location.state", poner ctrl+F
             state : {
                 idplato : props.plato.id,
-                nombre : props.plato.nombre
+                nombre : props.plato.nombre,
+                link : props.plato.link
             }
         })
     }
