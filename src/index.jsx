@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Datos from './Datos';
 import InfoPlato from './InfoPlato';
+import Login from './login/PaginaLogin';
 import './Style/style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
       }
         <Route path='/ejercicio1/' element={ <Datos/> } />
         <Route path='/ejercicio1/plato' element={ <InfoPlato/> } />
+        <Route path='/' element={ <Login/> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

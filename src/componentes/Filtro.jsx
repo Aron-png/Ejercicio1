@@ -1,10 +1,27 @@
 function Filtro(props) {
-    //Me devuelve un combito, un selector donde permite elegir una categoria
-    //Para que nadie se pegue en top ni en bot por 4 unidades.
+    //devuelve el nombre de usuario
+    const datosJSON = sessionStorage.getItem("DATA_USUARIO")
+    const datos = JSON.parse(datosJSON)
+    console.log("JSON",datosJSON)//STRING
+    console.log("datos",datos)//OBJETO
+    const usuario = []
+    //Recuerda que dentro del atributo de un objeto hay un array.
+    //{email:"aaronlivias0412@gmail.com", password :"admin", nombre :[{ valor :"Aaron"}]} --nombre[0]
+    usuario.push(<div className="fs-1 text-center">Bienvenido { datos.nombre[0].valor }</div>)
+    //La funcion hola no sirve. 
+    //Aprendi que las funciones que retornan <div> no rentan es mejor ponerlo en un array.
+    //solo retorna el bienvenido “nombre” que esta dentro del array por el push().
+    const hola = function(){
+        return <div>holaaaa</div>
+    }
+    
+    //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
     return <div className="mt-4 mb-4">
         
-        <figure class="text-center">
-            <blockquote class="blockquote">
+        <figure className="text-center">
+            {usuario}
+            {hola}
+            <blockquote className="blockquote">
              <p>Categoría</p>
             </blockquote>
         </figure>

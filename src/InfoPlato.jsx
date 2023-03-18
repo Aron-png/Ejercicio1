@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 function InfoPlato() {
-    const location = useLocation()
+    const location = useLocation()//Util para obtener info de Datos
     const [listaIngredientes, setlistaIngredientes] = useState([])
     const [listaPasos, setListaPasos] = useState([])
 
@@ -121,8 +121,8 @@ function InfoPlato() {
             </article>
     )
 
-    
-    return <div>
+    //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
+    return <div className="mt-4 mb-4">
         <div>
             <p class="fs-1 text-center">{location.state.nombre}: Degustame!</p>
         </div>

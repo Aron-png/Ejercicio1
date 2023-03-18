@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import ListaPlatos from "./componentes/ListaPlatos"
 {
     /*
-    En conclucion: Se modifico todo esto para que cuando uno valla con el enlace
+    En conclucion: Se agrego el "location" para que cuando uno valla con el enlace
     /MainPage  me regrese a la pagina /LoginPage, como que diciendo que si o si
     debo registrarme para entrar. Ademas se pueda filtrar peliculas por categoria.
     */
@@ -49,25 +49,34 @@ function MainPage() {
             console.error("Error de comunicacion")
         }
     }
-    /* No usamos aun las variables de estado */
+    /* variables de estado */
     const location = useLocation()
 
     const navigate = useNavigate()
-
-    useEffect(function(){
-        obtenerCategoriasAsyncAwait()
-        filtrarPlatos(-1)
-    },[])
+    useEffect(function() {
+        if (location.state == null) {
+            navigate("/")
+        }else {
+            obtenerCategoriasAsyncAwait()
+            filtrarPlatos(-1)
+        }
+        
+    }, [])
+/*
+    Operador Ternario:
+            Es una "Expresion" = bloque de codigo que va a devolver un valor.
+            <condicion>?<si_es_true>:<si_es_false>
+            return location.state !== null ? <div>Main Page: {location.state.username}</div>:<div></div>
+            A diferencia de los "if", no de vuelve ningun valor.
+*/
     
-    return <div className="container">
-    {
-        //Se pasara con un props. las siguientes funciones
-    }
+    return location.state !== null ? <div className="container">
     <Filtro 
         categorias={ listaCategorias }
-        onFiltrar={ filtrarPlatos } />
+        onFiltrar={ filtrarPlatos }         
+        />
     <ListaPlatos 
         platos={ listaPlatos } />
-</div>
+    </div>: <div></div>//div vacio
 }
 export default MainPage
