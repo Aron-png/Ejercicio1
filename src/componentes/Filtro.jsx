@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Filtro(props) {
     //devuelve el nombre de usuario
     const datosJSON = sessionStorage.getItem("DATA_USUARIO")
@@ -5,6 +6,20 @@ function Filtro(props) {
     console.log("JSON",datosJSON)//STRING
     console.log("datos",datos)//OBJETO
     const usuario = []
+    //Registra una lista cetegorias: se devuelve en Alterar o en sus componentes
+    const Lista_CategoriasJSON = JSON.stringify(props.categorias)//de obj a STRING
+            console.log("Objeto JScript",props.categorias)
+            console.log("String JSON",Lista_CategoriasJSON)
+    sessionStorage.setItem("ListaCategorias", Lista_CategoriasJSON)
+    //Registra una lista platos
+    const Lista_PlatosJSON = JSON.stringify(props.listaplatos)//de obj a STRING
+            console.log("Objeto JScript",props.listaplatos)
+            console.log("String JSON",Lista_PlatosJSON)
+    sessionStorage.setItem("ListaPlatos", Lista_PlatosJSON)
+
+
+
+
     //Recuerda que dentro del atributo de un objeto hay un array.
     //{email:"aaronlivias0412@gmail.com", password :"admin", nombre :[{ valor :"Aaron"}]} --nombre[0]
     usuario.push(<div className="fs-1 text-center">Bienvenido { datos.nombre[0].valor }</div>)
@@ -21,6 +36,9 @@ function Filtro(props) {
         <figure className="text-center">
             {usuario}
             {hola}
+            <br></br>
+            <Link to="/ejercicio1/alterar">Alterar los datos</Link>
+            <br></br><br></br>
             <blockquote className="blockquote">
              <p>Categoría</p>
             </blockquote>

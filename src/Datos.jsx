@@ -73,6 +73,7 @@ function MainPage() {
     return location.state !== null ? <div className="container">
     <Filtro 
         categorias={ listaCategorias }
+        listaplatos={listaPlatos}
         onFiltrar={ filtrarPlatos }         
         />
     <ListaPlatos 
