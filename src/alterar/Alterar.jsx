@@ -7,7 +7,7 @@ function Alterar(){
     //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
     return <div className="mt-4 mb-4"> 
         <blockquote className="blockquote text-center">
-            <p>¿Que bloque desea alterar de los datos?</p>
+            <p>¿Que bloque de datos desea alterar?</p>
         </blockquote>
         {
             /*
@@ -31,16 +31,32 @@ function Alterar(){
                 
         <br></br>
         <figure className="text-center">
-            <Link to="/ejercicio1/alterar/categoria">Categoria</Link>
+        <ul class="list-group">
+        
+            <li class="list-group-item list-group-item-light">
+                <Link className="estilo1" to="/ejercicio1/alterar/ingredientes">Ingredientes</Link>
+            </li>
+            
+            <li class="list-group-item list-group-item list-group-item-info">
+                <Link className="estilo1" to="/ejercicio1/alterar/categoria">Categorias</Link>
+            </li>
+            
+            <li class="list-group-item list-group-item-warning">
+                <Link className="estilo1" to="/ejercicio1/alterar/plato">Platos</Link>
+            </li>
+            
+            <li class="list-group-item list-group-item-danger">
+                <Link className="estilo1" to="/ejercicio1/alterar/pasos">Pasos</Link>
+            </li>
+        </ul>
+            
+            
             <br></br>
             <br></br>
-            <Link to="/ejercicio1/alterar/ingredientes">Ingredientes</Link>
+            
             <br></br>
             <br></br>
-            <Link to="/ejercicio1/alterar/pasos">Pasos</Link>
-            <br></br>
-            <br></br>
-            <Link to="/ejercicio1/alterar/plato">Plato</Link>
+            
         </figure>
     </div>
 }

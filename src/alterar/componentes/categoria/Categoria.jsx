@@ -1,5 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
+
+import Formulario from './componentes/Formulario'
 function Categoria(){
 
     //Funciones get
@@ -72,7 +74,8 @@ function Categoria(){
     }
     
     //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
-    return <div className="mt-4 mb-4">
+    return <div className="mt-4 mb-4 hideScroll">
+        
         <div className="row">
         <blockquote className="blockquote text-center">
             <p>Agregar</p>
@@ -94,7 +97,6 @@ function Categoria(){
             </div>
             <div className="col-md-4"></div>
         </div>
-        <br></br><br></br>
         <div className="row">
         <blockquote className="blockquote text-center">
             <p>Modificar</p>
@@ -107,31 +109,32 @@ function Categoria(){
                     value={nombre2} onChange={(event) => setnombre2(event.target.value)}/>
                 </div>
                 <br></br>
+                
                 <div className="col-auto">
                 
-                    <select className="form-select"
-                    value={id}
-                    onChange={(event) => setid(event.target.value)}
-                    >
-                        <option selected>Categoria...</option>
+                <select className="form-select"
+                value={id}
+                onChange={(event) => setid(event.target.value)}
+                >
+                    <option selected>Categoria...</option>
                     {
-                listaCategorias.map(function(cat){
+                    listaCategorias.map(function(cat){
                     return <option value={ cat.id }>
                         { cat.nombre }
-                    </option>
-                })
+                    </option>})
                     }
-                    </select>
-                </div>
+                </select>
+            </div>
                 <br></br>
                 <div className="col-auto text-center">
                     <button type="submit" className="btn btn-primary" onClick={ModificarCategoria}>Editar elemento</button> 
-                </div>          
+                </div>
+                <br></br>          
             </form>
             </div>
             <div className="col-md-4"></div>
         </div>
-        <br></br><br></br>
+
         <div className="row">
         <blockquote className="blockquote text-center">
             <p>Eliminar</p>

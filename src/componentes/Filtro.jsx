@@ -31,13 +31,15 @@ function Filtro(props) {
     }
     
     //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
+    
     return <div className="mt-4 mb-4">
         
         <figure className="text-center">
             {usuario}
             {hola}
             <br></br>
-            <Link to="/ejercicio1/alterar">Alterar los datos</Link>
+            <Link className="estilo2" to="/ejercicio1/alterar">Alterar los datos</Link>
+            
             <br></br><br></br>
             <blockquote className="blockquote">
              <p>Categoría</p>

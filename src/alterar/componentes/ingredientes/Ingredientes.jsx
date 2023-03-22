@@ -89,7 +89,7 @@ function Ingredientes(){
         handleQuitarIngrediente()
     }
     //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
-    return <div className="mt-4 mb-4">
+    return <div className="mt-4 mb-4 hideScroll">
         <div className="row">
             <blockquote className="blockquote text-center">
                 <p>Agregar</p>
