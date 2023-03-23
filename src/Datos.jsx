@@ -55,7 +55,7 @@ function MainPage() {
     const navigate = useNavigate()
     useEffect(function() {
         if (location.state == null) {
-            navigate("/")
+            navigate("/Ejercicio1")
         }else {
             obtenerCategoriasAsyncAwait()
             filtrarPlatos(-1)

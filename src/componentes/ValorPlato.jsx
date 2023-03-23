@@ -6,7 +6,7 @@ function ValorPlato(props) {
     const navigate = useNavigate()
 
     const butOnClick = function() {
-        navigate("/ejercicio1/plato", {
+        navigate("/Ejercicio1/plato", {
             //Con el state podemos enviar un objeto javaScript y poder obtenerlo en la
             //siguiennte pagina (InfoPlato), se busca como "location.state", poner ctrl+F
             state : {

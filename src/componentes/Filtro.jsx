@@ -38,7 +38,7 @@ function Filtro(props) {
             {usuario}
             {hola}
             <br></br>
-            <Link className="estilo2" to="/ejercicio1/alterar">Alterar los datos</Link>
+            <Link className="estilo2" to="/Ejercicio1/alterar">Alterar los datos</Link>
             
             <br></br><br></br>
             <blockquote className="blockquote">

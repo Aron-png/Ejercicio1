@@ -34,19 +34,19 @@ function Alterar(){
         <ul class="list-group">
         
             <li class="list-group-item list-group-item-light">
-                <Link className="estilo1" to="/ejercicio1/alterar/ingredientes">Ingredientes</Link>
+                <Link className="estilo1" to="/Ejercicio1/alterar/ingredientes">Ingredientes</Link>
             </li>
             
             <li class="list-group-item list-group-item list-group-item-info">
-                <Link className="estilo1" to="/ejercicio1/alterar/categoria">Categorias</Link>
+                <Link className="estilo1" to="/Ejercicio1/alterar/categoria">Categorias</Link>
             </li>
             
             <li class="list-group-item list-group-item-warning">
-                <Link className="estilo1" to="/ejercicio1/alterar/plato">Platos</Link>
+                <Link className="estilo1" to="/Ejercicio1/alterar/plato">Platos</Link>
             </li>
             
             <li class="list-group-item list-group-item-danger">
-                <Link className="estilo1" to="/ejercicio1/alterar/pasos">Pasos</Link>
+                <Link className="estilo1" to="/Ejercicio1/alterar/pasos">Pasos</Link>
             </li>
         </ul>
             

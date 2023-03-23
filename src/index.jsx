@@ -20,14 +20,14 @@ root.render(
       <Routes>
         {//Aca alineamos los hiperviculos a una pagina e importamos sus librerias
       }
-        <Route path='/' element={ <Login/> } /> 
-        <Route path='/ejercicio1/' element={ <Datos/> } />
-        <Route path='/ejercicio1/plato' element={ <InfoPlato/> } />
-        <Route path='/ejercicio1/alterar' element={ <Alterar/> } />
-        <Route path='/ejercicio1/alterar/categoria' element={ <Categoria/> } />
-        <Route path='/ejercicio1/alterar/ingredientes' element={ <Ingredientes/> } />
-        <Route path='/ejercicio1/alterar/pasos' element={ <Pasos/> } />
-        <Route path='/ejercicio1/alterar/plato' element={ <Plato/> } />
+        <Route path='/Ejercicio1' element={ <Login/> } /> 
+        <Route path='/Ejercicio1/datos' element={ <Datos/> } />
+        <Route path='/Ejercicio1/plato' element={ <InfoPlato/> } />
+        <Route path='/Ejercicio1/alterar' element={ <Alterar/> } />
+        <Route path='/Ejercicio1/alterar/categoria' element={ <Categoria/> } />
+        <Route path='/Ejercicio1/alterar/ingredientes' element={ <Ingredientes/> } />
+        <Route path='/Ejercicio1/alterar/pasos' element={ <Pasos/> } />
+        <Route path='/Ejercicio1/alterar/plato' element={ <Plato/> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

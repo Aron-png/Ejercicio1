@@ -48,7 +48,7 @@ function PaginaLogin(){
             
             seterror(datos.error) 
             console.error("errores",Errores)
-            navigate("/ejercicio1/", {
+            navigate("/Ejercicio1/datos", {
                 //Con el state podemos enviar un objeto javaScript y poder obtenerlo en la
                 //siguiennte pagina (Datos), se busca como "location.state", poner ctrl+F
                 state : {
