@@ -5,6 +5,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Datos from './Datos';
 import InfoPlato from './InfoPlato';
 import Login from './login/PaginaLogin';
+import Record from './record/PaginaRecord';
+import Pagina_Inicio from './pagina_Inicio/page_Inicio';
 import Alterar from './alterar/Alterar';
 import Categoria from './alterar/componentes/categoria/Categoria';
 import Ingredientes from './alterar/componentes/ingredientes/Ingredientes';
@@ -20,7 +22,9 @@ root.render(
       <Routes>
         {//Aca alineamos los hiperviculos a una pagina e importamos sus librerias
       }
-        <Route path='/Ejercicio1' element={ <Login/> } /> 
+        <Route path='/Ejercicio1' element={ <Pagina_Inicio/> } />
+        <Route path='/Ejercicio1/Login' element={ <Login/> } />
+        <Route path='/Ejercicio1/Record' element={ <Record/> } />
         <Route path='/Ejercicio1/datos' element={ <Datos/> } />
         <Route path='/Ejercicio1/plato' element={ <InfoPlato/> } />
         <Route path='/Ejercicio1/alterar' element={ <Alterar/> } />

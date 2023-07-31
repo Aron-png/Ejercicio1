@@ -10,6 +10,7 @@ function ValorPlato(props) {
             //Con el state podemos enviar un objeto javaScript y poder obtenerlo en la
             //siguiennte pagina (InfoPlato), se busca como "location.state", poner ctrl+F
             state : {
+//Todo parece indicar que props.plato.link o .estado = proviene del backend, visto en el postman
                 idplato : props.plato.id,
                 nombre : props.plato.nombre,
                 link : props.plato.link

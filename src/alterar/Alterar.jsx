@@ -49,14 +49,6 @@ function Alterar(){
                 <Link className="estilo1" to="/Ejercicio1/alterar/pasos">Pasos</Link>
             </li>
         </ul>
-            
-            
-            <br></br>
-            <br></br>
-            
-            <br></br>
-            <br></br>
-            
         </figure>
     </div>
 }

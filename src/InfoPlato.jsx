@@ -70,16 +70,12 @@ function InfoPlato() {
 
     for(let i = 0; i < ingredientes.length; i++){
         listacol.push(
-            
-            
               <div class="list-group">
                 <label class="list-group-item">
                   <input class="form-check-input me-1" type="checkbox" value=""/>
                   {ingredientes[i].nombre}
                 </label>
-              </div>
-            
-                       
+              </div>      
         )
     }
 
@@ -93,7 +89,6 @@ function InfoPlato() {
             </div>
             </button>
         </div>
-            
         )
     }
   
@@ -124,6 +119,9 @@ function InfoPlato() {
     //Para que nadie se pegue en top ni en bot por 4 unidades.<div className="mt-4 mb-4">
     return <div className="mt-4 mb-4">
         <div>
+            {
+                ////Con el state podemos enviar un objeto javaScript, visto en componentes/ValorPlato
+            }
             <p class="fs-1 text-center">{location.state.nombre}: Degustame!</p>
         </div>
         <br></br>

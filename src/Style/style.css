@@ -1,3 +1,4 @@
+  /*Carrusel*/
   .ITEMcarrouselE {
     display: grid;
     grid-auto-flow: column;
@@ -40,7 +41,6 @@ a: hover - cuando el usuario pasa el ratón sobre el enlace cuando
 a: active - el enlace se hace clic en el momento
   */
   a.estilo1 {
-    background-color:rgb(36, 211, 138);
     color:#27241d;
     padding: 8px;
     text-decoration:none;

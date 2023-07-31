@@ -1,4 +1,4 @@
-import { Await, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import PaginaFormulario from "./componentes/PaginaFormulario"
 
@@ -19,6 +19,7 @@ function PaginaLogin(){
         )
         //Respuesta en forma de JSON
         const data = await response.json()
+        console.log("XXXXX",data)
         
         return data
     }
@@ -27,8 +28,8 @@ function PaginaLogin(){
         usuario, password
     ) {
         const datos = await IngresarDatosLogin(usuario, password)
-        if(datos.error === ""){
-                                            //Login Correcto
+        if(datos.error === ""){//Si el login ingresado es correcto, entonces...
+                                            
             //dataUsuario es un objeto JavaScript, "podemos" convertirlo en un STRING, si queremos.
             const dataUsuario = {
                 email : usuario,
@@ -41,6 +42,10 @@ function PaginaLogin(){
             const dataUsuarioJSON = JSON.stringify(dataUsuario)
             console.log("Objeto JScript",dataUsuario)
             console.log("String JSON",dataUsuarioJSON)
+            //Quiero que me retorne solo el nombre, para esto modifique el endpoint
+            //Que antes me retornaba un arrays de todos los  nombres pero ahora solo este.
+            console.log("JScript del nombre",dataUsuario.nombre)
+            
             // Guardado en session storage, hasta que se cierre la pestaña
             //sessionStorage.setItem("nombre", valor) = guardando info
             //sessionStorage.getItem("nombre") = EXTRALLENDO info.
@@ -52,7 +57,7 @@ function PaginaLogin(){
                 //Con el state podemos enviar un objeto javaScript y poder obtenerlo en la
                 //siguiennte pagina (Datos), se busca como "location.state", poner ctrl+F
                 state : {
-                    email : usuario
+                    nombre : dataUsuario.nombre
                 }
             })
         }else{
@@ -80,10 +85,7 @@ function PaginaLogin(){
             <PaginaFormulario 
                     onLoginOk={ onLoginOk } />
             </div>
-            <div className="col-md-4">
-            <div>
-            </div>
-            </div>
+            <div className="col-md-4"></div>
         </div>
         <div className="row">
 

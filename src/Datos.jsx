@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import Filtro from "./componentes/Filtro"
-import { useLocation, useNavigate } from "react-router-dom"
 import ListaPlatos from "./componentes/ListaPlatos"
+import FiltroBotones from "./componentes/FiltroBotones"
+import { useLocation, useNavigate } from "react-router-dom"
 {
     /*
     En conclucion: Se agrego el "location" para que cuando uno valla con el enlace
@@ -55,7 +56,7 @@ function MainPage() {
     const navigate = useNavigate()
     useEffect(function() {
         if (location.state == null) {
-            navigate("/Ejercicio1")
+            navigate("/Ejercicio1/Login")
         }else {
             obtenerCategoriasAsyncAwait()
             filtrarPlatos(-1)
@@ -76,6 +77,10 @@ function MainPage() {
         listaplatos={listaPlatos}
         onFiltrar={ filtrarPlatos }         
         />
+    <FiltroBotones
+        categorias={ listaCategorias }
+        onFiltrar={ filtrarPlatos }
+    />
     <ListaPlatos 
         platos={ listaPlatos } />
     </div>: <div></div>//div vacio

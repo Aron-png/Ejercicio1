@@ -1,11 +1,16 @@
+import { useLocation } from "react-router-dom"
 import { Link } from "react-router-dom"
 function Filtro(props) {
-    //devuelve el nombre de usuario
+    const location = useLocation()
+    //devuelve el STRING del Login "Al momento de registrarse"
     const datosJSON = sessionStorage.getItem("DATA_USUARIO")
+    //Lo pasa a objeto
     const datos = JSON.parse(datosJSON)
     console.log("JSON",datosJSON)//STRING
     console.log("datos",datos)//OBJETO
     const usuario = []
+
+    //           CREO que estos 2 (Lista_CategoriasJSON  y Lista_PlatosJSON) no lo eh logrado utilizar
     //Registra una lista cetegorias: se devuelve en Alterar o en sus componentes
     const Lista_CategoriasJSON = JSON.stringify(props.categorias)//de obj a STRING
             console.log("Objeto JScript",props.categorias)
@@ -22,7 +27,8 @@ function Filtro(props) {
 
     //Recuerda que dentro del atributo de un objeto hay un array.
     //{email:"aaronlivias0412@gmail.com", password :"admin", nombre :[{ valor :"Aaron"}]} --nombre[0]
-    usuario.push(<div className="fs-1 text-center">Bienvenido { datos.nombre[0].valor }</div>)
+    //Bienvenido { datos.nombre[0].valor }
+    usuario.push(<div className="fs-1 text-center">Bienvenido { location.state.nombre }</div>)
     //La funcion hola no sirve. 
     //Aprendi que las funciones que retornan <div> no rentan es mejor ponerlo en un array.
     //solo retorna el bienvenido “nombre” que esta dentro del array por el push().
